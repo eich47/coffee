@@ -1,3 +1,9 @@
+//global
+.mt-section{
+  margin-top: 70px;
+}
+
+
 .header{
   position: relative;
 
@@ -45,4 +51,19 @@
   position: absolute;
   top: 15px;
   right: 0;
+}
+
+//секция услуги
+.service .card{
+  background-color: $body-bg;
+  border: none;
+}
+.service .card img{
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+}
+.service .card .card-title{
+  text-align: center;
+  min-height: 67px;
 }
