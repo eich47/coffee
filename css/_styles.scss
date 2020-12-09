@@ -1,0 +1,48 @@
+.header{
+  position: relative;
+
+  &::before{
+    @include media-breakpoint-up(md) {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: $primary;
+    }
+  }
+}
+
+.brand-info .col-text{
+  position: relative;
+  z-index: 1;
+}
+.brand-info .col-text .some-text{
+  font-size: 16px;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    bottom: 0;
+    left: 44px;
+    font-size: 2.5rem;
+  }
+
+
+}
+
+.media-info{
+  background-color: $body-bg;
+  @include media-breakpoint-up(md) {
+    min-height: 450px;
+  }
+
+}
+
+//переключение меню кнопка
+.toggle-menu{
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
