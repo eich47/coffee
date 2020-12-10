@@ -3,6 +3,9 @@
   margin-top: 70px;
 }
 
+//переменные
+$x-gray: #EDF0F5;
+
 //хэдер для секция
 .header-section .title{
   font-size: 2rem;
@@ -98,8 +101,68 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.media-coffee .links a{
+.links a{
   &:hover{
     color: #C7A17A;
   }
+}
+
+//секция подарки
+.gift{
+  padding-top: 85px;
+  padding-bottom: 85px;
+  background-color: $body-bg;
+  background: linear-gradient(90deg, $body-bg 70%, $white 30%);
+}
+
+.gift-info{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient(90deg, $body-bg 20%, $white 20%);
+  border-top: 1px solid $body-bg;
+  border-bottom: 1px solid $body-bg;
+  border-right: 1px solid $body-bg;
+
+}
+
+//--табы-коненет
+.media-tab .image{
+  align-items: start;
+  margin-right: 16px;
+  width: 400px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    margin-right: 48px;
+  }
+}
+.media-tab .media{
+  align-items: stretch;
+}
+.media-tab .media-body{
+
+}
+.media-tab .links{
+  display: flex;
+  justify-content: space-between;
+}
+//--табы
+.media-tab-links .list-group-item{
+  background-color: $x-gray;
+  color: $body-color;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset 10px 0px 7px -10px rgba(205, 205, 205, 0.5);
+  &:first-child{
+    border-top: 1px solid $body-bg;
+  }
+}
+.media-tab-links .active{
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(205, 205, 205, 0.5);
 }

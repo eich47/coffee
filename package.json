@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
     "slider": "^1.0.4"
   }
 }
