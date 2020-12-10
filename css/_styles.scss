@@ -131,6 +131,11 @@ $x-gray: #EDF0F5;
 
 }
 
+//для теста
+#gift2 img{
+  filter: grayscale(1);
+}
+
 //--табы-коненет
 .media-tab .image{
   align-items: start;
