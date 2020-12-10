@@ -84,6 +84,12 @@ $x-gray: #EDF0F5;
 @import "slider";
 
 //секция кофе
+.coffee{
+  background: linear-gradient(90deg, $primary 30%,  $white 30%);
+  $pt: 80px;
+  padding-top: $pt;
+  padding-bottom: $pt;
+}
 //--карточка
 .media-coffee{
   align-items: stretch;
