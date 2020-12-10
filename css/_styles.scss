@@ -3,7 +3,17 @@
   margin-top: 70px;
 }
 
+//хэдер для секция
+.header-section .title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header-section .sub-title{
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
 
+//хэдер сайта
 .header{
   position: relative;
 
@@ -66,4 +76,30 @@
 .service .card .card-title{
   text-align: center;
   min-height: 67px;
+}
+
+@import "slider";
+
+//секция кофе
+//--карточка
+.media-coffee{
+  align-items: stretch;
+  box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
+  background-color: $white;
+}
+.media-coffee .image{
+  width: 100px;
+  @include media-breakpoint-up(lg) {
+    width: 235px;
+  }
+
+}
+.media-coffee .media-body{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.media-coffee .links a{
+  &:hover{
+    color: #C7A17A;
+  }
 }
