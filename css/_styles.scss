@@ -166,3 +166,39 @@ $x-gray: #EDF0F5;
   background-color: white;
   box-shadow: 5px 5px 5px 0px rgba(205, 205, 205, 0.5);
 }
+
+//секция комбо
+.combo{
+  $pt: 80px;
+  padding-top: $pt;
+  padding-bottom: $pt;
+  background: linear-gradient(90deg, $white 70%, $primary 30%);
+}
+.combo .links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+  }
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
+  }
+}
+.combo .card{
+  background-color: $body-bg;
+}
+.combo .card-body{
+  background-color: $white;
+}
+
+.combo .card-img-top{
+  @include media-breakpoint-up(md) {
+    height: 178px;
+    object-fit: cover;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 300px;
+  }
+}
