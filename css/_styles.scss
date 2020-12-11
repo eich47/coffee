@@ -245,7 +245,10 @@ $x-gray: #EDF0F5;
   align-items: center;
   flex: 1;
 }
-.ico-wrapper > div {
+.ico-item{
+  display: inline-block;
+}
+.ico-wrapper > .ico-item {
   width: 60px;
   height: 60px;
   display: flex;
