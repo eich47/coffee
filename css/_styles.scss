@@ -230,6 +230,11 @@ $x-gray: #EDF0F5;
 }
 .mobile-menu.show{
   transform: translate(0,0);
+
+  @include media-breakpoint-up(md) {
+    display: none!important;
+  }
+
 }
 
 //кнопка c анимацией
