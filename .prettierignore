@@ -1,0 +1,9 @@
+*.map
+*.svg
+*.png
+.prettierignore
+dist/*
+js/vendor
+img/
+.cache
+node_modules/
