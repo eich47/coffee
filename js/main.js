@@ -5,7 +5,11 @@ import MobileMenu from './menu'
 const sliderCoffee = new Slider('#slider-coffee')
 const sliderCombo = new Slider('#slider-combo')
 
-const mobileMenu = new MobileMenu('.toggle-menu', '.nav-general')
+const options = {
+  menuSelector: '.nav-general',
+  menuButtonSelector: '.toggle-menu',
+}
+const mobileMenu = new MobileMenu(options)
 
 //прокрутка по якорю
 $('.nav-general').click(function (e) {
