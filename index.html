@@ -1,543 +1,826 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Coffee</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Coffee</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/main.scss" />
+  </head>
 
-  <link rel="stylesheet" href="css/main.scss">
-</head>
-
-<body>
-
-  <header class="header">
-    <div class="container">
-      <div class="row no-gutters">
-        <!-- info -->
-        <div class="col-md-3 brand-info">
-          <div class="h-100 d-flex flex-column justify-content-between">
-            <div class="col-brand mt-2">
-              <h1 class="text-uppercase brand">Ваш бренд</h1>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row no-gutters">
+          <!-- info -->
+          <div class="col-md-3 brand-info">
+            <div class="h-100 d-flex flex-column justify-content-between">
+              <div class="col-brand mt-2">
+                <h1 class="text-uppercase brand">Ваш бренд</h1>
+              </div>
+              <div class="col-text mb-5">
+                <p
+                  class="some-text text-uppercase brand-text h1 font-weight-bold"
+                >
+                  Ваш
+                  <span class="d-block bg-accent p-2 text-white"
+                    >перcональный</span
+                  >
+                  Кофе
+                </p>
+              </div>
             </div>
-            <div class="col-text mb-5">
-              <p class="some-text text-uppercase brand-text h1 font-weight-bold">
-                Ваш
-                <span class="d-block bg-accent p-2 text-white">перcональный</span>
-                Кофе
+            <button type="button" class="btn toggle-menu d-block d-md-none">
+              <span class="ico-wrapper">
+                <span class="ico-item">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <!-- img -->
+          <div class="d-none d-md-block col-md-7 header-media">
+            <div class="media-info">
+              <img
+                class="img-fluid"
+                src="img/header/header-pic.png"
+                alt="media"
+              />
+            </div>
+          </div>
+          <!-- nav -->
+          <div class="d-none d-md-block col-md-2">
+            <div class="d-flex h-100 align-items-center">
+              <nav>
+                <ul class="nav flex-column justify-content-center nav-general">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-accent2 active"
+                      href="#service"
+                      >Услуги</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-accent2"
+                      href="#coffee"
+                      >Кофе</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-accent2" href="#gift"
+                      >Подарочные наборы</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-accent2"
+                      href="#combo"
+                      >Комбо</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <article>
+        <h2 class="sr-only">Мы предлагаем</h2>
+        <section id="service" class="service mt-section">
+          <header class="header-section container mb-5">
+            <div class="d-flex flex-column">
+              <h2 class="text-center title">Услуги</h2>
+              <p class="order-first text-center sub-title">
+                Кофе в любой обстановке
               </p>
             </div>
-          </div>
-          <button type="button" class="btn toggle-menu d-block d-md-none">
-              <span class="ico-wrapper">
-                  <span class="ico-item">
-                      <span class="line"></span>
-                      <span class="line"></span>
-                      <span class="line"></span>
-                  </span>
-              </span>
-          </button>
-
-        </div>
-
-        <!-- img -->
-        <div class="d-none d-md-block col-md-7 header-media">
-          <div class="media-info">
-            <img class="img-fluid" src="img/header/header-pic.png" alt="media">
-          </div>
-        </div>
-        <!-- nav -->
-        <div class="d-none d-md-block col-md-2">
-          <div class="d-flex h-100 align-items-center">
-              <nav>
-                  <ul class="nav flex-column justify-content-center nav-general">
-                      <li class="nav-item">
-                          <a class="nav-link text-uppercase text-accent2 active" href="#service">Услуги</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-uppercase text-accent2" href="#coffee">Кофе</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-uppercase text-accent2" href="#gift">Подарочные наборы</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-uppercase text-accent2" href="#combo">Комбо</a>
-                      </li>
-
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main>
-      <article>
-          <h2 class="sr-only">Мы предлагаем</h2>
-    <section id="service" class="service mt-section">
-        <header class="header-section container mb-5">
-            <div class="d-flex flex-column">
-                <h2 class="text-center title">Услуги</h2>
-                <p class="order-first text-center sub-title">Кофе в любой обстановке</p>
-            </div>
-        </header>
-      <div class="container">
-        <div class="row">
-          <!-- 1 -->
-          <div class="col-6 col-md-3">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/service/service1.png" alt="service 1">
-              <div class="card-body">
-                <h3 class="card-title">Кофе на месте</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, officia?</p>
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div class="col-6 col-md-3">
-          <div class="card">
-            <img class="card-img-top img-fluid" src="img/service/service2.png" alt="service 2">
-            <div class="card-body">
-              <h3 class="card-title">Кофе c собой</h3>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, officia?</p>
-            </div>
-          </div>
-        </div>
-          <!-- 3 -->
-          <div class="col-6 col-md-3">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/service/service3.png" alt="service 3">
-              <div class="card-body">
-                <h3 class="card-title">Кофе в падарок</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, officia?</p>
-              </div>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div class="col-6 col-md-3">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/service/service4.png" alt="service 4">
-              <div class="card-body">
-                <h3 class="card-title">Кофе от баристы</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, officia?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- coffee -->
-    <section class="coffee pt-5 mt-5" id="coffee">
-      <header class="header-section container mb-5">
-        <div class="d-flex flex-column">
-          <h2 class="text-center title">Кофе</h2>
-          <p class="order-first text-center sub-title">Кофе из далеких стран</p>
-        </div>
-      </header>
-
-        <div class="slider slider-coffee" id="slider-coffee">
-            <div class="slider-wrapper ">
-                <div class="slider-items container p-0 position-relative">
-                    <div class="slider_item col-12 col-sm-12 active">
-                        <div class="row">
-                            <!-- 1 -->
-                            <div class="col-md-6 mb-5">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 1">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Бодрое утро</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2 -->
-                            <div class="col-md-6 mb-5">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 1">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Бодрый обед</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 3 -->
-                            <div class="col-md-6 mb-5 mb-md-0">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 3">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Медленный вечер</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 4 -->
-                            <div class="col-md-6 mb-5 mb-sm-0 mb-md-0">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee1.png" alt="coffee 4">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Спокойная ночь</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- 21 -->
-                    <div class="slider_item col-12 col-sm-12">
-                        <div class="row">
-                            <!-- 1 -->
-                            <div class="col-md-6 mb-5">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 1">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Бодрое утро</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2 -->
-                            <div class="col-md-6 mb-5">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 1">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Бодрый обед</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 3 -->
-                            <div class="col-md-6 mb-5 mb-md-0">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee.png" alt="coffee 3">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Медленный вечер</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 4 -->
-                            <div class="col-md-6 mb-5 mb-sm-0 mb-md-0">
-                                <div class="media media-coffee">
-                                    <div class="d-flex image align-items-start bg-accent2 mr-4">
-                                        <img class="img-fluid" src="img/coffee/coffee1.png" alt="coffee 4">
-                                    </div>
-                                    <div class="media-body d-flex flex-column justify-content-center">
-                                        <span class="price text-accent h5">99.00</span>
-                                        <h3 class="title font-weight-bold h4 mb-4">Спокойная ночь</h3>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="links">
-                                            <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                Заказать
-                                            </button>
-                                            <a href="#" class="btn">Подробнее</a></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
+          </header>
+          <div class="container">
+            <div class="row">
+              <!-- 1 -->
+              <div class="col-6 col-md-3">
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="img/service/service1.png"
+                    alt="service 1"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">Кофе на месте</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Odio, officia?
+                    </p>
+                  </div>
                 </div>
+              </div>
+              <!-- 2 -->
+              <div class="col-6 col-md-3">
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="img/service/service2.png"
+                    alt="service 2"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">Кофе c собой</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Odio, officia?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="col-6 col-md-3">
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="img/service/service3.png"
+                    alt="service 3"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">Кофе в падарок</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Odio, officia?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="col-6 col-md-3">
+                <div class="card">
+                  <img
+                    class="card-img-top img-fluid"
+                    src="img/service/service4.png"
+                    alt="service 4"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">Кофе от баристы</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Odio, officia?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- coffee -->
+        <section class="coffee pt-5 mt-5" id="coffee">
+          <header class="header-section container mb-5">
+            <div class="d-flex flex-column">
+              <h2 class="text-center title">Кофе</h2>
+              <p class="order-first text-center sub-title">
+                Кофе из далеких стран
+              </p>
+            </div>
+          </header>
+
+          <div class="slider slider-coffee" id="slider-coffee">
+            <div class="slider-wrapper">
+              <div class="slider-items container p-0 position-relative">
+                <div class="slider_item col-12 col-sm-12 active">
+                  <div class="row">
+                    <!-- 1 -->
+                    <div class="col-md-6 mb-5">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 1"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Бодрое утро
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-md-6 mb-5">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 1"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Бодрый обед
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-md-6 mb-5 mb-md-0">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 3"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Медленный вечер
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="col-md-6 mb-5 mb-sm-0 mb-md-0">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee1.png"
+                            alt="coffee 4"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Спокойная ночь
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 21 -->
+                <div class="slider_item col-12 col-sm-12">
+                  <div class="row">
+                    <!-- 1 -->
+                    <div class="col-md-6 mb-5">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 1"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Бодрое утро
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-md-6 mb-5">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 1"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Бодрый обед
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-md-6 mb-5 mb-md-0">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee.png"
+                            alt="coffee 3"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Медленный вечер
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="col-md-6 mb-5 mb-sm-0 mb-md-0">
+                      <div class="media media-coffee">
+                        <div
+                          class="d-flex image align-items-start bg-accent2 mr-4"
+                        >
+                          <img
+                            class="img-fluid"
+                            src="img/coffee/coffee1.png"
+                            alt="coffee 4"
+                          />
+                        </div>
+                        <div
+                          class="media-body d-flex flex-column justify-content-center"
+                        >
+                          <span class="price text-accent h5">99.00</span>
+                          <h3 class="title font-weight-bold h4 mb-4">
+                            Спокойная ночь
+                          </h3>
+                          <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                          </p>
+                          <div class="links">
+                            <button
+                              type="button"
+                              class="btn text-accent2 bg-accent rounded-pill"
+                            >
+                              Заказать
+                            </button>
+                            <a href="#" class="btn">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <button class="control prev btn bg-accent" tabindex="-1"></button>
             <button class="control next btn bg-accent" tabindex="-1"></button>
-        </div>
-
-    </section>
-      <section id="gift" class="gift bg">
+          </div>
+        </section>
+        <section id="gift" class="gift bg">
           <header class="header-section container mb-5">
-              <div class="d-flex flex-column">
-                  <h2 class="text-center title">Подарочные наборы</h2>
-                  <p class="order-first text-center sub-title">Сделай подарок для друзей</p>
-              </div>
+            <div class="d-flex flex-column">
+              <h2 class="text-center title">Подарочные наборы</h2>
+              <p class="order-first text-center sub-title">
+                Сделай подарок для друзей
+              </p>
+            </div>
           </header>
           <div class="container">
-              <div class="row no-gutters">
-                  <div class="col-11 gift-info">
-                      <div class="tab-content media-tab">
-                          <div class="tab-pane active" id="gift1" role="tabpanel">
-                              <div class="media">
-                                  <div class="d-flex image">
-                                      <img class="img-fluid" src="img/gift/gift1.png" alt="gift 1">
-                                  </div>
-                                  <div class="media-body d-flex flex-column py-3 pr-3 justify-content-center">
-                                      <h3 class="h4 font-weight-bold">Подарочный набор 1</h3>
-                                      <p class="price order-first text-accent" >454.00</p>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis cum debitis deserunt et expedita illo incidunt libero maiores possimus praesentium provident quaerat quibusdam quis quo, ratione ullam veritatis voluptatibus?</p>
-                                      <div class="links mt-5">
-                                          <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                              Заказать
-                                          </button>
-                                          <a href="#" class="btn">Подробнее</a></div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="tab-pane" id="gift2" role="tabpanel">
-                              <div class="media">
-                                  <div class="d-flex image">
-                                      <img class="img-fluid" src="img/gift/gift1.png" alt="gift 1">
-                                  </div>
-                                  <div class="media-body d-flex flex-column py-3 pr-3 justify-content-center">
-                                      <h3 class="h4 font-weight-bold">Подарочный набор 2</h3>
-                                      <p class="price order-first text-accent" >566.00</p>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis cum debitis deserunt et expedita illo incidunt libero maiores possimus praesentium provident quaerat quibusdam quis quo, ratione ullam veritatis voluptatibus?</p>
-                                      <div class="links mt-5">
-                                          <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                              Заказать
-                                          </button>
-                                          <a href="#" class="btn">Подробнее</a></div>
-                                  </div>
-                              </div>
-                          </div>
+            <div class="row no-gutters">
+              <div class="col-11 gift-info">
+                <div class="tab-content media-tab">
+                  <div class="tab-pane active" id="gift1" role="tabpanel">
+                    <div class="media">
+                      <div class="d-flex image">
+                        <img
+                          class="img-fluid"
+                          src="img/gift/gift1.png"
+                          alt="gift 1"
+                        />
                       </div>
-                  </div>
-                  <div class="col-1 gift-info-link">
-
-                      <div class="list-group media-tab-links" id="giftList" role="tablist">
-                          <a class="list-group-item list-group-item-action active" data-toggle="list" href="#gift1" role="tab">1</a>
-                          <a class="list-group-item list-group-item-action" data-toggle="list" href="#gift2" role="tab">2</a>
+                      <div
+                        class="media-body d-flex flex-column py-3 pr-3 justify-content-center"
+                      >
+                        <h3 class="h4 font-weight-bold">Подарочный набор 1</h3>
+                        <p class="price order-first text-accent">454.00</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Alias corporis cum debitis deserunt et expedita
+                          illo incidunt libero maiores possimus praesentium
+                          provident quaerat quibusdam quis quo, ratione ullam
+                          veritatis voluptatibus?
+                        </p>
+                        <div class="links mt-5">
+                          <button
+                            type="button"
+                            class="btn text-accent2 bg-accent rounded-pill"
+                          >
+                            Заказать
+                          </button>
+                          <a href="#" class="btn">Подробнее</a>
+                        </div>
                       </div>
+                    </div>
                   </div>
+                  <div class="tab-pane" id="gift2" role="tabpanel">
+                    <div class="media">
+                      <div class="d-flex image">
+                        <img
+                          class="img-fluid"
+                          src="img/gift/gift1.png"
+                          alt="gift 1"
+                        />
+                      </div>
+                      <div
+                        class="media-body d-flex flex-column py-3 pr-3 justify-content-center"
+                      >
+                        <h3 class="h4 font-weight-bold">Подарочный набор 2</h3>
+                        <p class="price order-first text-accent">566.00</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Alias corporis cum debitis deserunt et expedita
+                          illo incidunt libero maiores possimus praesentium
+                          provident quaerat quibusdam quis quo, ratione ullam
+                          veritatis voluptatibus?
+                        </p>
+                        <div class="links mt-5">
+                          <button
+                            type="button"
+                            class="btn text-accent2 bg-accent rounded-pill"
+                          >
+                            Заказать
+                          </button>
+                          <a href="#" class="btn">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
+              <div class="col-1 gift-info-link">
+                <div
+                  class="list-group media-tab-links"
+                  id="giftList"
+                  role="tablist"
+                >
+                  <a
+                    class="list-group-item list-group-item-action active"
+                    data-toggle="list"
+                    href="#gift1"
+                    role="tab"
+                    >1</a
+                  >
+                  <a
+                    class="list-group-item list-group-item-action"
+                    data-toggle="list"
+                    href="#gift2"
+                    role="tab"
+                    >2</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-      </section>
+        </section>
 
-      <!-- секция комбо -->
-      <section class="combo" id="combo">
+        <!-- секция комбо -->
+        <section class="combo" id="combo">
           <header class="header-section container mb-5">
-              <div class="d-flex flex-column">
-                  <h2 class="text-center title">Комбо наборы</h2>
-                  <p class="order-first text-center sub-title">Купи больше с выгодой</p>
-              </div>
+            <div class="d-flex flex-column">
+              <h2 class="text-center title">Комбо наборы</h2>
+              <p class="order-first text-center sub-title">
+                Купи больше с выгодой
+              </p>
+            </div>
           </header>
-
 
           <!-- слайдер комбо -->
           <div class="slider slider-coffee" id="slider-combo">
-              <div class="slider-wrapper ">
-                  <div class="slider-items container p-0 position-relative">
-                      <div class="slider_item col-12 col-sm-12 active">
-                          <div class="row">
-                              <!-- 1 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo1.png" alt="combo 1">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо с утра</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- 2 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo2.png" alt="combo 2">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо для обеда</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- 3 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo3.png" alt="combo 3">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо для вечера</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+            <div class="slider-wrapper">
+              <div class="slider-items container p-0 position-relative">
+                <div class="slider_item col-12 col-sm-12 active">
+                  <div class="row">
+                    <!-- 1 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo1.png"
+                          alt="combo 1"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо с утра</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
                           </div>
+                        </div>
                       </div>
-                      <!-- 21 -->
-                      <div class="slider_item col-12 col-sm-12">
-                          <div class="row">
-                              <!-- 1 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo2.png" alt="combo 1">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо с утра</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- 2 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo2.png" alt="combo 2">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо для обеда</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!-- 3 -->
-                              <div class="col-md-4 mb-5 mb-md-0">
-                                  <div class="card">
-                                      <img class="card-img-top" src="img/combo/combo3.png" alt="combo 3">
-                                      <div class="card-body">
-                                          <div class="d-flex flex-column">
-                                              <h3 class="h3 card-title">Комбо для вечера</h3>
-                                              <span class="price text-accent order-first">123.00</span>
-                                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                  elit. Officia, vitae?</p>
-                                              <div class="links">
-                                                  <button type="button" class="btn text-accent2 bg-accent rounded-pill">
-                                                      Заказать
-                                                  </button>
-                                                  <a href="#" class="btn">Подробнее</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo2.png"
+                          alt="combo 2"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо для обеда</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
                           </div>
+                        </div>
                       </div>
-
-
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo3.png"
+                          alt="combo 3"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо для вечера</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <!-- 21 -->
+                <div class="slider_item col-12 col-sm-12">
+                  <div class="row">
+                    <!-- 1 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo2.png"
+                          alt="combo 1"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо с утра</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo2.png"
+                          alt="combo 2"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо для обеда</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card">
+                        <img
+                          class="card-img-top"
+                          src="img/combo/combo3.png"
+                          alt="combo 3"
+                        />
+                        <div class="card-body">
+                          <div class="d-flex flex-column">
+                            <h3 class="h3 card-title">Комбо для вечера</h3>
+                            <span class="price text-accent order-first"
+                              >123.00</span
+                            >
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Officia, vitae?
+                            </p>
+                            <div class="links">
+                              <button
+                                type="button"
+                                class="btn text-accent2 bg-accent rounded-pill"
+                              >
+                                Заказать
+                              </button>
+                              <a href="#" class="btn">Подробнее</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button class="control prev btn bg-accent" tabindex="-1"></button>
-              <button class="control next btn bg-accent" tabindex="-1"></button>
+            </div>
+            <button class="control prev btn bg-accent" tabindex="-1"></button>
+            <button class="control next btn bg-accent" tabindex="-1"></button>
           </div>
-
-      </section>
+        </section>
       </article>
-  </main>
-  <footer class="text-center p-3">
-      Coffee
-  </footer>
-  
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+    </main>
+    <footer class="text-center p-3">Coffee</footer>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
