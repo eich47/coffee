@@ -1,0 +1,22 @@
+.link-button {
+  display: flex;
+  justify-content: center;
+  border: 1px solid transparent;
+  @include font(1.6rem, 2.2rem, bold);
+  color: $color-primary;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: transparent;
+  text-transform: uppercase;
+  outline: none;
+  &:hover,
+  &:active {
+    cursor: pointer;
+    background-color: $color-accent;
+  }
+
+  &_buy {
+    background-color: $color-accent;
+    color: $color-background;
+  }
+}
