@@ -1,0 +1,17 @@
+.coffee-block {
+  background-color: $color-background;
+  padding: 128px 0 60px 0;
+}
+
+.coffee-block__conent {
+  margin-top: 72px;
+}
+
+.coffee-block__conent .slider__column {
+  margin-right: 30px;
+  flex-basis: 48.5%;
+}
+
+.coffee-block__conent .coffee-card {
+  margin-bottom: 30px;
+}
