@@ -1,6 +1,9 @@
 .coffee-card {
   display: flex;
   box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
+  &_vertical {
+    flex-direction: column;
+  }
 }
 .coffee-card__content {
   padding: 42px;
