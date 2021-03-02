@@ -6,10 +6,13 @@
   padding: 42px;
   display: flex;
   flex-direction: column;
+  background-color: $color-light;
 }
 
 .coffee-card__image {
   flex-basis: 235px;
+  flex-shrink: 0;
+  background-color: $color-background-card;
   img {
     max-width: 100%;
   }
