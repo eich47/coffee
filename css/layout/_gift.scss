@@ -1,0 +1,40 @@
+.gift {
+  padding: 80px 0;
+
+  .coffee-card__content {
+    padding-left: 64px;
+  }
+}
+
+.gift__content {
+  display: flex;
+  margin-top: 66px;
+}
+
+.gift__content .coffee-card__image {
+  flex-basis: 490px;
+  padding: 27px;
+
+  > img {
+    margin: 0 auto;
+  }
+}
+
+.gift__control-item {
+  @include font(3rem, 3.4rem, bold);
+  padding: 65px 38px;
+  background-color: $color-background;
+  border: none;
+  &_selected {
+    background-color: $color-light;
+    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
+  }
+
+  &:hover {
+    background-color: $color-accent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
