@@ -1,0 +1,34 @@
+.card__image {
+  display: block;
+  height: 80px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0 40px;
+  &_in {
+    background-image: url(../img/service/service1.png);
+  }
+  &_out {
+    background-image: url(../img/service/service2.png);
+  }
+  &_gift {
+    background-image: url(../img/service/service3.png);
+  }
+  &_man {
+    background-image: url(../img/service/service4.png);
+  }
+}
+
+.card__title {
+  @include font(2.4rem, 2.8rem, bold);
+  color: $color-primary;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.card__description {
+  @include font(1.6rem, 2.2rem);
+  color: $color-additional;
+  text-align: center;
+  margin: 0;
+}
