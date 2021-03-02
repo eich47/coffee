@@ -1,0 +1,17 @@
+.title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-section__title {
+  @include font(3rem, 3.4rem, bold);
+  margin: 0;
+}
+
+.title-section__subtitle {
+  @include font(2rem, 2.4rem);
+  order: -1;
+  margin: 0 0 8px;
+}
