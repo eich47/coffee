@@ -9,3 +9,13 @@
 
 //base
 @import "base/base";
+
+//component
+@import "components/logo";
+@import "components/brand";
+@import "components/navigation";
+@import "components/cart";
+
+//layout
+@import "layout/wrapper";
+@import "layout/header";

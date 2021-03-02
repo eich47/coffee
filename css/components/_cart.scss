@@ -1,0 +1,22 @@
+.cart {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: url(../img/header/IC_CART.svg);
+  background-repeat: no-repeat;
+  background-position: left, bottom;
+  text-decoration: none;
+}
+.cart__badge {
+  @include font(1.4rem, 2rem);
+  background-color: $color-accent;
+  color: $color-background;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

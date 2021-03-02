@@ -1,0 +1,27 @@
+@mixin font($size, $height: $size, $weight: normal, $style: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin column2d($width1, $width2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > :first-child {
+    flex-basis: $width1;
+  }
+  > :last-child {
+    flex-basis: $width2;
+  }
+}

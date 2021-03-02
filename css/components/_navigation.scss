@@ -1,0 +1,21 @@
+.navigation {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+}
+
+.navigation__link {
+  @include font(1.6rem, 2.6rem, normal);
+  display: block;
+  text-decoration: none;
+  color: $color-background;
+  padding: 8px 0;
+  &:hover,
+  &:active {
+    color: $color-accent;
+  }
+}

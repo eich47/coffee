@@ -1,0 +1,13 @@
+.brand {
+  @include font(54px, 70px, bold);
+}
+
+.brand__item {
+  display: block;
+  text-transform: uppercase;
+
+  &_colored {
+    background-color: $color-accent;
+    color: $color-background;
+  }
+}

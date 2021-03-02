@@ -26,35 +26,43 @@
   <body>
     <header class="header">
       <div class="wrapper">
-        <div class="layout-2-header-column">
+        <div class="header__layout-2-column">
           <div class="header__block-1">
             <div class="logo">
               <a href="#">
-                <img src="/img/header/LOGO.png" alt="revo logo" />
+                <img
+                  class="logo__img"
+                  src="/img/header/LOGO.png"
+                  alt="revo logo"
+                />
               </a>
             </div>
-            <h1 class="brand">
-              <span class="brand__item">Ваш</span>
-              <span class="brand__item brand__item_colored">перcональный</span>
-              <span class="brand__item">Кофе</span>
-            </h1>
+            <div class="header__brand">
+              <h1 class="brand">
+                <span class="brand__item">Ваш</span>
+                <span class="brand__item brand__item_colored"
+                  >перcональный</span
+                >
+                <span class="brand__item">Кофе</span>
+              </h1>
+            </div>
           </div>
           <div class="header__block-2">
-            <div class="cart">
+            <a href="#" class="cart">
               <span class="cart__badge">3</span>
-            </div>
-            <nav>
+            </a>
+            <nav class="header__nav">
               <ul class="navigation">
                 <li class="navigation__item navigation__item_selected">
-                  <a href="#">Услуги</a>
+                  <a class="navigation__link"  href="#">Услуги</a>
                 </li>
-                <li class="navigation__item"><a href="#">Кофе</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Кофе</a></li>
                 <li class="navigation__item">
-                  <a href="#">Подарочные наборы</a>
-                </li>
-                <li class="navigation__item"><a href="#">Комбо наборы</a></li>
-              </ul>
-            </nav>
+                  <a class="navigation__link" href="#">Подарочные наборы</a>
+                  <li class="navigation__item"><a class="navigation__link" href="#">Комбо наборы</a></li>
+                </ul>
+              </nav>
+            </li>
           </div>
         </div>
       </div>

@@ -1,0 +1,31 @@
+.header {
+  background-color: $color-background;
+}
+.header__block-1 {
+  padding-top: 72px;
+  padding-bottom: 64px;
+  background: url("../img/header/header-pic.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  min-height: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__block-2 {
+  background-color: $color-primary;
+  padding-top: 72px;
+  padding-left: 56px;
+  padding-bottom: 10px;
+}
+
+.header__nav {
+  margin-top: 118px;
+}
+.header__brand {
+  max-width: 486px;
+}
+.header__layout-2-column {
+  @include column2d(80%, 20%);
+}
