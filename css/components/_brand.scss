@@ -1,5 +1,8 @@
 .brand {
   @include font(54px, 70px, bold);
+  @include media-mobile {
+    font-size: 2rem;
+  }
 }
 
 .brand__item {

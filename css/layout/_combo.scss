@@ -10,19 +10,39 @@
     width: 25%;
     height: 100%;
     background: $color-primary;
+    @include media-mobile {
+      display: none;
+    }
   }
 }
 
 .combo__content {
   margin-top: 64px;
+  @include media-mobile {
+    .slider__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .combo .slider__column {
   flex-basis: 31%;
   flex-shrink: 0;
   margin-right: 30px;
+  @include media-mobile {
+    margin-right: 0;
+    flex-basis: 100%;
+    width: 100%;
+  }
 }
 
 .combo .coffee-card__image img {
   height: 300px;
+}
+
+.combo .coffee-card {
+  @include media-mobile {
+    text-align: center;
+  }
 }

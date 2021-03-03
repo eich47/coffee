@@ -18,9 +18,24 @@
   }
 }
 
+.gift__title {
+  @include media-mobile {
+    text-align: center;
+  }
+}
+
 .gift__content {
   display: flex;
   margin-top: 66px;
+  @include media-mobile {
+    flex-direction: column-reverse;
+    .coffee-card {
+      flex-direction: column;
+    }
+    .coffee-card__content {
+      padding: 1rem;
+    }
+  }
 }
 
 .gift__content .coffee-card__image {
@@ -48,6 +63,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  @include media-mobile {
+    padding: 1rem 1.5rem;
   }
 }
 
