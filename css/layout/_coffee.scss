@@ -1,6 +1,17 @@
 .coffee-block {
   background-color: $color-background;
   padding: 128px 0 60px 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 35%;
+    background-color: $color-primary;
+    top: 0;
+    left: 0;
+  }
 }
 
 .coffee-block__conent {

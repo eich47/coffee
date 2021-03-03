@@ -1,5 +1,17 @@
 .gift {
   padding: 80px 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: $color-background;
+    z-index: -1;
+  }
 
   .coffee-card__content {
     padding-left: 64px;
