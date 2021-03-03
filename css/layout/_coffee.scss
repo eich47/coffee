@@ -21,6 +21,9 @@
 .coffee-block__conent .slider__column {
   margin-right: 30px;
   flex-basis: 48.5%;
+  @include media-tablet {
+    flex-basis: 100%;
+  }
 }
 
 .coffee-block__conent .coffee-card {
