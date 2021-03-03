@@ -9,6 +9,8 @@ body {
   line-height: 2rem;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
