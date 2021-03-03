@@ -25,3 +25,21 @@
     flex-basis: $width2;
   }
 }
+
+@mixin media-laptop {
+  @media (max-width: $content-width-desktop) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $content-width-tablet) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $content-width-mobile) {
+    @content;
+  }
+}
