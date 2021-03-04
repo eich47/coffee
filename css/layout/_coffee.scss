@@ -20,11 +20,15 @@
   }
 }
 
-.coffee-block__conent {
+.coffee-block__content {
   margin-top: 72px;
 }
 
-.coffee-block__conent .slider__column {
+.coffee-block .slider__content {
+  transition: all 0.5s;
+}
+
+.coffee-block__content .slider__column {
   margin-right: 30px;
   flex-basis: 48.5%;
   @include media-tablet {
@@ -32,7 +36,7 @@
   }
 }
 
-.coffee-block__conent .coffee-card {
+.coffee-block__content .coffee-card {
   margin-bottom: 30px;
   @include media-mobile {
     flex-direction: column;
