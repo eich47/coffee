@@ -74,5 +74,12 @@ export const data = {
       title: "Комбо набор 3",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
+    {
+      id: 4,
+      urlToImg: "img/coffee/coffee1.png",
+      price: "99.00",
+      title: "Комбо набор 5",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
   ],
 };
