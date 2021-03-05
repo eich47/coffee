@@ -1,11 +1,17 @@
 export class Slider {
-  constructor({ numberSlidesPerPage = 2, gap = 30 }) {
+  constructor({
+    numberSlidesPerPage = 2,
+    gap = 30,
+    amountElementsIntoColumn = 1,
+  }) {
     this.content = "";
     this.numberSlidesPerPage = numberSlidesPerPage;
     this.currentSlide = this.numberSlidesPerPage;
     this.shift = 0;
     //distance between items
     this.gap = gap;
+    //amount elements into a column
+    this.amountElementsIntoColumn = amountElementsIntoColumn;
   }
 
   buildSlider(content) {
@@ -48,16 +54,32 @@ export class Slider {
   }
 
   setContent(content) {
-    const container = content.map((item) => {
+    const container = [];
+    for (let i = 0; i < content.length; i++) {
       const clone = this.sliderColumn.cloneNode(true);
+      const item = content[i];
       if (typeof item === "string") {
         clone.innerHTML = item;
-        return clone;
+        container.push(clone);
       } else {
-        clone.append(item);
-        return clone;
+        //if need to put tho elements into one column
+        if (this.amountElementsIntoColumn === 2) {
+          if (i % 2 === 0) {
+            clone.appendChild(item);
+            const nextItem = content[i + 1];
+            if (nextItem !== undefined) {
+              clone.appendChild(nextItem);
+            }
+            container.push(clone);
+            i++;
+          }
+        } else {
+          //if need to put one element into one column
+          clone.appendChild(item);
+          container.push(clone);
+        }
       }
-    });
+    }
     this.sliderContent.append(...container);
   }
 
