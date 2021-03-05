@@ -33,8 +33,6 @@ export class CoffeeCard {
     this.price &&
       (template += `<span class="coffee-card__price">${this.price}</span>`);
 
-    //description
-    //price
     //action buttons
     template += `<div class="coffee-card__action">
       <button class="link-button link-button_buy">
