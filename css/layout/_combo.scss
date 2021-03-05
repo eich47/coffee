@@ -24,6 +24,10 @@
       padding-right: 0;
     }
   }
+  .coffee-card {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .combo .slider__column {
