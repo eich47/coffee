@@ -62,7 +62,7 @@ export class Slider {
         clone.innerHTML = item;
         container.push(clone);
       } else {
-        //if need to put tho elements into one column
+        //if need to put two elements into one column
         if (this.amountElementsIntoColumn === 2) {
           if (i % 2 === 0) {
             clone.appendChild(item);
