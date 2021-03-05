@@ -54,7 +54,8 @@ export class Slider {
         clone.innerHTML = item;
         return clone;
       } else {
-        return this.sliderColumn.appendChild(item);
+        clone.append(item);
+        return clone;
       }
     });
     this.sliderContent.append(...container);
