@@ -1,10 +1,12 @@
 import { Slider } from "./Slider";
 import { CoffeeCard } from "./CoffeeCard";
 import { data } from "./data";
+import { Tabs } from "./Tabs";
 
 window.onload = function () {
   renderCoffeeSlider();
   renderComboSetSlider();
+  renderGiftTabs();
 };
 
 //coffee slider
@@ -52,4 +54,16 @@ const generateComboSetSlide = (content) => {
     amountElementsIntoColumn: 1,
   });
   return slider.buildSlider(content);
+};
+
+const renderGiftTabs = () => {
+  const tabs = new Tabs();
+  const contentForTabs = data.gift;
+
+  const wrapper = document.querySelector(".gift__content");
+  wrapper.innerHTML = "";
+  const contentForTabsObj = contentForTabs.map((item) => {
+    return new CoffeeCard(item);
+  });
+  wrapper.append(tabs.buildTabs(contentForTabsObj));
 };
