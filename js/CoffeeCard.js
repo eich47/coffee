@@ -1,10 +1,11 @@
 export class CoffeeCard {
-  constructor({ id, urlToImg, price, title, description }) {
+  constructor({ id, urlToImg, price, title, description, ...rest }) {
     this.id = id;
     this.urlToImg = urlToImg;
     this.price = price;
     this.title = title;
     this.description = description;
+    this.rest = rest;
   }
 
   generateCard() {
