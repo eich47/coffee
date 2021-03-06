@@ -82,4 +82,24 @@ export const data = {
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
   ],
+
+  gift: [
+    {
+      id: 11,
+      urlToImg: "img/gift/gift1.png",
+      price: "991.00",
+      title: "Подарочный набор 1",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis cum debitis deserunt et expedita illo incidunt libero maiores possimus praesentium provident quaerat quibusdam quis quo, ratione ullam veritatis voluptatibus?.",
+      nameTab: 1,
+    },
+    {
+      id: 12,
+      urlToImg: "img/gift/gift2.png",
+      price: "811.00",
+      title: "Подарочный набор 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      nameTab: 2,
+    },
+  ],
 };
