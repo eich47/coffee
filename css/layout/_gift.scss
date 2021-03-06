@@ -25,7 +25,6 @@
 }
 
 .gift__content {
-  display: flex;
   margin-top: 66px;
   @include media-mobile {
     flex-direction: column-reverse;
@@ -67,6 +66,23 @@
 
   @include media-mobile {
     padding: 1rem 1.5rem;
+  }
+}
+
+.gift__tabs {
+  display: flex;
+}
+
+.gift__list {
+  overflow: hidden;
+  height: 300px;
+}
+
+.gift__item {
+  height: 300px;
+
+  .coffee-card {
+    height: 100%;
   }
 }
 
