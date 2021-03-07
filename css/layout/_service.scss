@@ -7,10 +7,12 @@
 }
 
 .service-block__content {
-  .layout-4-column {
-    > * {
-      flex-basis: 100%;
-      margin-bottom: 20px;
+  @include media-mobile {
+    .layout-4-column {
+      > * {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+      }
     }
   }
 }
