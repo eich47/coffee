@@ -15,6 +15,7 @@
 
   .coffee-card__content {
     padding-left: 64px;
+    flex-grow: 1;
   }
 }
 
@@ -26,15 +27,6 @@
 
 .gift__content {
   margin-top: 66px;
-  @include media-mobile {
-    flex-direction: column-reverse;
-    .coffee-card {
-      flex-direction: column;
-    }
-    .coffee-card__content {
-      padding: 1rem;
-    }
-  }
 }
 
 .gift__content .coffee-card__image {
@@ -43,6 +35,15 @@
 
   > img {
     margin: 0 auto;
+  }
+}
+
+.gift__controls {
+  display: flex;
+  flex-direction: column;
+
+  @include media-mobile {
+    flex-direction: row;
   }
 }
 
@@ -71,11 +72,29 @@
 
 .gift__tabs {
   display: flex;
+  @include media-mobile {
+    flex-direction: column-reverse;
+    .coffee-card {
+      flex-direction: column;
+    }
+    .coffee-card__content {
+      padding: 1rem;
+    }
+  }
 }
 
 .gift__list {
   overflow: hidden;
   height: 300px;
+  flex-grow: 1;
+
+  @include media-tablet {
+    height: 350px;
+  }
+
+  @include media-mobile {
+    height: 615px;
+  }
 }
 
 .gift__item {
@@ -83,6 +102,13 @@
 
   .coffee-card {
     height: 100%;
+  }
+
+  @include media-tablet {
+    height: 350px;
+  }
+  @include media-mobile {
+    height: 615px;
   }
 }
 
