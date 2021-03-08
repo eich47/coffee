@@ -9,6 +9,7 @@ window.onload = function () {
   renderComboSetSlider();
   renderGiftTabs();
   renderMobileMenu();
+  onResizeBrowser();
 };
 
 //coffee slider
@@ -26,11 +27,21 @@ const renderCoffeeSlider = () => {
 };
 
 const generateCoffeeSlide = (content) => {
-  let slider = new Slider({
-    numberSlidesPerPage: 2,
-    gap: 30,
-    amountElementsIntoColumn: 2,
-  });
+  let slider = null;
+  if (isTablet()) {
+    slider = new Slider({
+      numberSlidesPerPage: 1,
+      gap: 30,
+      amountElementsIntoColumn: 2,
+    });
+  } else {
+    slider = new Slider({
+      numberSlidesPerPage: 2,
+      gap: 30,
+      amountElementsIntoColumn: 2,
+    });
+  }
+
   return slider.buildSlider(content);
 };
 
@@ -50,11 +61,27 @@ const renderComboSetSlider = () => {
 };
 
 const generateComboSetSlide = (content) => {
-  let slider = new Slider({
-    numberSlidesPerPage: 3,
-    gap: 30,
-    amountElementsIntoColumn: 1,
-  });
+  let slider = null;
+  if (isMobile()) {
+    slider = new Slider({
+      numberSlidesPerPage: 1,
+      gap: 0,
+      amountElementsIntoColumn: 1,
+    });
+  } else if (isTablet()) {
+    slider = new Slider({
+      numberSlidesPerPage: 2,
+      gap: 30,
+      amountElementsIntoColumn: 1,
+    });
+  } else {
+    slider = new Slider({
+      numberSlidesPerPage: 3,
+      gap: 30,
+      amountElementsIntoColumn: 1,
+    });
+  }
+
   return slider.buildSlider(content);
 };
 
@@ -93,4 +120,42 @@ const generateMobileMenu = () => {
 const bindButtonAndMenu = (menu) => {
   const menuButton = new MenuButton(menu);
   menuButton.bindEvent();
+};
+
+const onResizeBrowser = () => {
+  const renderCoffeeSliderDebounce = debounce(renderCoffeeSlider, 1000);
+  const renderComboSetSliderDebounce = debounce(renderComboSetSlider, 1000);
+  window.addEventListener("resize", renderCoffeeSliderDebounce);
+  window.addEventListener("resize", renderComboSetSliderDebounce);
+};
+
+const isTablet = () => {
+  const width = 768;
+  return mediaQuery(width);
+};
+
+const isMobile = () => {
+  const width = 320;
+  return mediaQuery(width);
+};
+
+const mediaQuery = (width) => {
+  const mediaQueryTablet = window.matchMedia(`(max-width:${width}px)`);
+  return mediaQueryTablet.matches;
+};
+
+//delay to run a function in time ms
+const debounce = (fn, time) => {
+  let timerId = null;
+
+  return () => {
+    const later = () => {
+      timerId = null;
+      fn.apply(this);
+    };
+
+    clearTimeout(timerId);
+
+    timerId = setTimeout(later, time);
+  };
 };
