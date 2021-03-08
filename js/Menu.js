@@ -12,6 +12,8 @@ export class Menu {
     const existingMenuClone = existingMenu.cloneNode(true);
     menuContainer.append(existingMenuClone);
 
+    this.bindEvent(menuContainer);
+
     return menuContainer;
   }
 
@@ -21,5 +23,11 @@ export class Menu {
       const parent = menu.parentNode;
       parent.removeChild(menu);
     }
+  }
+
+  bindEvent(menu) {
+    menu.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
   }
 }
