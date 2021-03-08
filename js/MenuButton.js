@@ -1,6 +1,7 @@
 export class MenuButton {
   constructor(menu) {
     this.menu = menu;
+    this.animateClass = "animate";
   }
 
   bindEvent() {
@@ -11,15 +12,15 @@ export class MenuButton {
     }
     this.resetState(button);
     button.addEventListener("click", () => {
-      button.classList.toggle("animate");
+      button.classList.toggle(this.animateClass);
       this.menu.classList.toggle("show");
     });
     window.addEventListener("scroll", () => {
-      button.classList.remove("animate");
+      button.classList.remove(this.animateClass);
     });
   }
 
   resetState(button) {
-    button.classList.remove("animate");
+    button.classList.remove(this.animateClass);
   }
 }
