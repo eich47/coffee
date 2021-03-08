@@ -40,14 +40,20 @@
     display: none;
   }
 }
+
 .header__brand {
   max-width: 486px;
+
+  .brand__item {
+    @include media-tablet {
+      font-size: 2.1rem;
+    }
+  }
 }
+
 .header__layout-2-column {
   @include column2d(80%, 20%);
-  @include media-tablet {
-    flex-wrap: nowrap;
-  }
+  flex-wrap: nowrap;
 }
 
 .header__icon {
