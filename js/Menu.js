@@ -29,5 +29,11 @@ export class Menu {
     menu.addEventListener("click", () => {
       menu.classList.remove("show");
     });
+
+    window.addEventListener("scroll", () => {
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+      }
+    });
   }
 }
