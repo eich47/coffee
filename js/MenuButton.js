@@ -14,6 +14,9 @@ export class MenuButton {
       button.classList.toggle("animate");
       this.menu.classList.toggle("show");
     });
+    window.addEventListener("scroll", () => {
+      button.classList.remove("animate");
+    });
   }
 
   resetState(button) {
