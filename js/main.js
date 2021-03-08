@@ -125,8 +125,10 @@ const bindButtonAndMenu = (menu) => {
 const onResizeBrowser = () => {
   const renderCoffeeSliderDebounce = debounce(renderCoffeeSlider, 1000);
   const renderComboSetSliderDebounce = debounce(renderComboSetSlider, 1000);
+  const generateMobileMenuDebounce = debounce(generateMobileMenu, 500);
   window.addEventListener("resize", renderCoffeeSliderDebounce);
   window.addEventListener("resize", renderComboSetSliderDebounce);
+  window.addEventListener("resize", generateMobileMenuDebounce);
 };
 
 const isTablet = () => {
