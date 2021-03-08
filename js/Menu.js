@@ -1,6 +1,7 @@
 export class Menu {
   constructor() {
     this.containerMenuClass = "mobile-menu-container";
+    this.showMenuClass = "show";
   }
 
   generateMenu() {
@@ -27,12 +28,12 @@ export class Menu {
 
   bindEvent(menu) {
     menu.addEventListener("click", () => {
-      menu.classList.remove("show");
+      menu.classList.remove(this.showMenuClass);
     });
 
     window.addEventListener("scroll", () => {
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
+      if (menu.classList.contains(this.showMenuClass)) {
+        menu.classList.remove(this.showMenuClass);
       }
     });
   }
