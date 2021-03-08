@@ -19,3 +19,20 @@
     color: $color-accent;
   }
 }
+
+.mobile-menu-container {
+  position: fixed;
+  top: 175px;
+  right: 11px;
+  z-index: 100;
+  transition: all 0.7s;
+  transform: translate(115%, 0);
+  width: 140px;
+  padding: 10px;
+  background-color: $color-primary;
+
+  &.show {
+    transform: translate(0, 0);
+    display: block;
+  }
+}

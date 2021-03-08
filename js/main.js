@@ -2,11 +2,13 @@ import { Slider } from "./Slider";
 import { CoffeeCard } from "./CoffeeCard";
 import { data } from "./data";
 import { Tabs } from "./Tabs";
-
+import { Menu } from "./Menu";
+import { MenuButton } from "./MenuButton";
 window.onload = function () {
   renderCoffeeSlider();
   renderComboSetSlider();
   renderGiftTabs();
+  renderMobileMenu();
 };
 
 //coffee slider
@@ -66,4 +68,29 @@ const renderGiftTabs = () => {
     return new CoffeeCard(item);
   });
   wrapper.append(tabs.buildTabs(contentForTabsObj));
+};
+
+//mobile navigation menu
+
+const renderMobileMenu = () => {
+  const widthTablet = 768;
+  const mediaQueryTablet = window.matchMedia(`(max-width:${widthTablet}px)`);
+  if (!mediaQueryTablet.matches) {
+    return;
+  }
+
+  generateMobileMenu();
+};
+
+const generateMobileMenu = () => {
+  const menuObj = new Menu();
+  const menu = menuObj.generateMenu();
+  document.querySelector(".header__block-2").append(menu);
+
+  bindButtonAndMenu(menu);
+};
+
+const bindButtonAndMenu = (menu) => {
+  const menuButton = new MenuButton(menu);
+  menuButton.bindEvent();
 };
