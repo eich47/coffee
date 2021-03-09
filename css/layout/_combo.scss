@@ -1,14 +1,14 @@
 .combo {
+  position: relative;
   padding: 88px 0;
   background-color: $color-light;
-  position: relative;
   &::before {
-    content: "";
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     width: 25%;
     height: 100%;
+    content: "";
     background: $color-primary;
     @include media-mobile {
       display: none;
@@ -20,8 +20,8 @@
   margin-top: 64px;
   @include media-mobile {
     .slider__content {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
     }
   }
   .coffee-card {
@@ -35,9 +35,9 @@
   flex-shrink: 0;
   margin-right: 30px;
   @include media-mobile {
-    margin-right: 0;
     flex-basis: 100%;
     width: 100%;
+    margin-right: 0;
   }
 }
 

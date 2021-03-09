@@ -2,35 +2,35 @@
   background-color: $color-background;
 }
 .header__block-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 768px;
   padding-top: 72px;
   padding-bottom: 64px;
   background: url("../img/header/header-pic.png");
   background-repeat: no-repeat;
   background-position: right center;
-  min-height: 768px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   @include media-tablet {
     min-height: 444px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
   @include media-mobile {
-    background: none;
     min-width: auto;
+    background: none;
   }
 }
 
 .header__block-2 {
-  background-color: $color-primary;
   padding-top: 72px;
-  padding-left: 56px;
-  padding-bottom: 10px;
   padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+  background-color: $color-primary;
   @include media-tablet {
-    padding-left: 16px;
     padding-right: 16px;
+    padding-left: 16px;
   }
 }
 

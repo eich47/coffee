@@ -1,10 +1,10 @@
 .card__image {
   display: block;
-  height: 80px;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 80px;
   margin: 0 0 40px;
+  background-repeat: no-repeat;
+  background-position: center;
   &_in {
     background-image: url(../img/service/service1.png);
   }
@@ -21,14 +21,14 @@
 
 .card__title {
   @include font(2.4rem, 2.8rem, bold);
+  margin: 0 0 12px;
   color: $color-primary;
   text-align: center;
-  margin: 0 0 12px;
 }
 
 .card__description {
   @include font(1.6rem, 2.2rem);
+  margin: 0;
   color: $color-additional;
   text-align: center;
-  margin: 0;
 }

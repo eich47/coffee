@@ -1,21 +1,21 @@
 .gift {
-  padding: 80px 0;
   position: relative;
+  padding: 80px 0;
   &::before {
-    content: "";
     position: absolute;
-    height: 100%;
-    width: 75%;
-    display: block;
     top: 0;
     left: 0;
-    background-color: $color-background;
     z-index: -1;
+    display: block;
+    width: 75%;
+    height: 100%;
+    content: "";
+    background-color: $color-background;
   }
 
   .coffee-card__content {
-    padding-left: 64px;
     flex-grow: 1;
+    padding-left: 64px;
   }
 }
 
@@ -54,7 +54,7 @@
   border: none;
   &_selected {
     background-color: $color-light;
-    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
+    box-shadow: 1px 0 10px rgba(205, 205, 205, 0.5);
   }
 
   &:hover {
@@ -84,9 +84,9 @@
 }
 
 .gift__list {
-  overflow: hidden;
-  height: 300px;
   flex-grow: 1;
+  height: 300px;
+  overflow: hidden;
 
   @include media-tablet {
     height: 350px;

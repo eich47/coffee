@@ -1,14 +1,14 @@
 .link-button {
   display: flex;
   justify-content: center;
-  border: 1px solid transparent;
-  @include font(1.6rem, 2.2rem, bold);
-  color: $color-primary;
   padding: 8px 16px;
-  border-radius: 20px;
-  background-color: transparent;
+  color: $color-primary;
   text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
   outline: none;
+  @include font(1.6rem, 2.2rem, bold);
   &:hover,
   &:active {
     cursor: pointer;
@@ -16,7 +16,7 @@
   }
 
   &_buy {
-    background-color: $color-accent;
     color: $color-background;
+    background-color: $color-accent;
   }
 }
