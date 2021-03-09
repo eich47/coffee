@@ -36,10 +36,10 @@ export class CoffeeCard {
 
     //action buttons
     template += `<div class="coffee-card__action">
-      <button class="link-button link-button_buy">
+      <button class="link-button link-button_buy js-buy">
         Заказать
       </button>
-      <button class="link-button">Подробнее</button>
+      <button class="link-button js-more">Подробнее</button>
     </div>`;
 
     template += `</div>`;

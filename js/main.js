@@ -4,6 +4,8 @@ import { data } from "./data";
 import { Tabs } from "./Tabs";
 import { Menu } from "./Menu";
 import { MenuButton } from "./MenuButton";
+import { CoffeeCardModal } from "./CoffeeCardModal";
+
 window.onload = function () {
   renderCoffeeSlider();
   renderComboSetSlider();
@@ -24,6 +26,8 @@ const renderCoffeeSlider = () => {
   });
   const slider = generateCoffeeSlide(content);
   container.appendChild(slider);
+
+  addCoffeeClickHandler();
 };
 
 const generateCoffeeSlide = (content) => {
@@ -160,4 +164,33 @@ const debounce = (fn, time) => {
 
     timerId = setTimeout(later, time);
   };
+};
+
+//handler for coffee card into a coffee slider
+
+const addCoffeeClickHandler = () => {
+  document
+    .querySelector(".coffee-block .coffee-block__content")
+    .addEventListener("click", (e) => {
+      if (e.target.classList.contains("js-buy")) {
+        e.preventDefault();
+        console.log("buy");
+      } else if (e.target.classList.contains("js-more")) {
+        e.preventDefault();
+        let clickedCoffeeId = e.target
+          .closest(".coffee-card")
+          .getAttribute("data-id");
+        let clickedData = getClickedData(clickedCoffeeId);
+        renderCoffeeModalWindow(clickedData);
+      }
+    });
+};
+
+const getClickedData = (id) => {
+  return data.coffee.find((coffee) => coffee.id === +id);
+};
+
+const renderCoffeeModalWindow = (content) => {
+  const modal = new CoffeeCardModal("coffee-modal", content);
+  modal.renderModal();
 };
