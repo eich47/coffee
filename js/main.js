@@ -62,6 +62,8 @@ const renderComboSetSlider = () => {
   });
   const slider = generateComboSetSlide(content);
   container.appendChild(slider);
+
+  addComboSetClickHandler();
 };
 
 const generateComboSetSlide = (content) => {
@@ -193,4 +195,28 @@ const getClickedData = (id) => {
 const renderCoffeeModalWindow = (content) => {
   const modal = new CoffeeCardModal("coffee-modal", content);
   modal.renderModal();
+};
+
+//handler for combo set card
+
+const addComboSetClickHandler = () => {
+  document
+    .querySelector(".combo .combo__content")
+    .addEventListener("click", (e) => {
+      if (e.target.classList.contains("js-buy")) {
+        e.preventDefault();
+        console.log("buy");
+      } else if (e.target.classList.contains("js-more")) {
+        e.preventDefault();
+        let clickedCoffeeId = e.target
+          .closest(".coffee-card")
+          .getAttribute("data-id");
+        let clickedData = getComboSetClickedData(clickedCoffeeId);
+        renderCoffeeModalWindow(clickedData);
+      }
+    });
+};
+
+const getComboSetClickedData = (id) => {
+  return data.combo.find((coffee) => coffee.id === +id);
 };

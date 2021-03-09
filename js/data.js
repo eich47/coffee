@@ -64,6 +64,8 @@ export const data = {
       title: "Комбо набор 1",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, vitae?.",
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. Iusto eaque eos nihil dignissimos laboriosam culpa voluptatibus recusandae rem quod libero error maiores, fugiat odit quo saepe expedita labore cupiditate repellat voluptates quas nostrum consectetur necessitatibus! Accusantium, facilis temporibus explicabo expedita saepe reprehenderit libero quod rem nisi maiores rerum voluptates? Velit repudiandae enim dicta amet nesciunt delectus ullam quasi eos! Pariatur, cupiditate. Totam asperiores voluptatum tempora quo voluptatibus est. Expedita dicta consequuntur sunt possimus ex facere veniam optio, ab maiores, omnis doloribus in harum soluta nostrum esse nihil.",
     },
     {
       id: 2,
@@ -71,6 +73,8 @@ export const data = {
       price: "99.00",
       title: "Комбо набор 2",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. Iusto eaque eos nihil dignissimos laboriosam culpa voluptatibus recusandae rem quod libero error maiores, fugiat odit quo saepe expedita labore cupiditate repellat voluptates quas nostrum consectetur necessitatibus! Accusantium, facilis temporibus explicabo expedita saepe reprehenderit libero quod rem nisi maiores rerum voluptates? Velit repudiandae enim dicta amet nesciunt delectus ullam quasi eos! Pariatur, cupiditate. Totam asperiores voluptatum tempora quo voluptatibus est. Expedita dicta consequuntur sunt possimus ex facere veniam optio, ab maiores, omnis doloribus in harum soluta nostrum esse nihil.",
     },
     {
       id: 3,
@@ -78,16 +82,20 @@ export const data = {
       price: "199.00",
       title: "Комбо набор 3",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. Iusto eaque eos nihil dignissimos laboriosam culpa voluptatibus recusandae rem quod libero error maiores, fugiat odit quo saepe expedita labore cupiditate repellat voluptates quas nostrum consectetur necessitatibus! Accusantium, facilis temporibus explicabo expedita saepe reprehenderit libero quod rem nisi maiores rerum voluptates? Velit repudiandae enim dicta amet nesciunt delectus ullam quasi eos! Pariatur, cupiditate. Totam asperiores voluptatum tempora quo voluptatibus est. Expedita dicta consequuntur sunt possimus ex facere veniam optio, ab maiores, omnis doloribus in harum soluta nostrum esse nihil.",
     },
     {
       id: 4,
       urlToImg: "img/coffee/coffee1.png",
       price: "99.00",
-      title: "Комбо набор 3",
+      title: "Комбо набор 4",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. Iusto eaque eos nihil dignissimos laboriosam culpa voluptatibus recusandae rem quod libero error maiores, fugiat odit quo saepe expedita labore cupiditate repellat voluptates quas nostrum consectetur necessitatibus! Accusantium, facilis temporibus explicabo expedita saepe reprehenderit libero quod rem nisi maiores rerum voluptates? Velit repudiandae enim dicta amet nesciunt delectus ullam quasi eos! Pariatur, cupiditate. Totam asperiores voluptatum tempora quo voluptatibus est. Expedita dicta consequuntur sunt possimus ex facere veniam optio, ab maiores, omnis doloribus in harum soluta nostrum esse nihil.",
     },
     {
-      id: 4,
+      id: 5,
       urlToImg: "img/coffee/coffee1.png",
       price: "99.00",
       title: "Комбо набор 5",
