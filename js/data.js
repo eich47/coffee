@@ -112,6 +112,8 @@ export const data = {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis cum debitis deserunt et expedita illo incidunt libero maiores possimus praesentium provident quaerat quibusdam quis quo, ratione ullam veritatis voluptatibus?.",
       nameTab: 1,
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. Iusto eaque eos nihil dignissimos laboriosam culpa voluptatibus recusandae rem quod libero error maiores, fugiat odit quo saepe expedita labore cupiditate repellat voluptates quas nostrum consectetur necessitatibus! Accusantium, facilis temporibus explicabo expedita saepe reprehenderit libero quod rem nisi maiores rerum voluptates? Velit repudiandae enim dicta amet nesciunt delectus ullam quasi eos! Pariatur, cupiditate. Totam asperiores voluptatum tempora quo voluptatibus est. ",
     },
     {
       id: 12,
@@ -120,6 +122,8 @@ export const data = {
       title: "Подарочный набор 2",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
       nameTab: 2,
+      fullDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, minima exercitationem. ",
     },
   ],
 };

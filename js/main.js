@@ -101,6 +101,8 @@ const renderGiftTabs = () => {
     return new CoffeeCard(item);
   });
   wrapper.append(tabs.buildTabs(contentForTabsObj));
+
+  addGiftSetClickHandler();
 };
 
 //mobile navigation menu
@@ -212,6 +214,26 @@ const addComboSetClickHandler = () => {
           .closest(".coffee-card")
           .getAttribute("data-id");
         let clickedData = getClickedData(clickedCoffeeId, "combo");
+        renderCoffeeModalWindow(clickedData);
+      }
+    });
+};
+
+//handler for gift set card
+
+const addGiftSetClickHandler = () => {
+  document
+    .querySelector(".gift .gift__content")
+    .addEventListener("click", (e) => {
+      if (e.target.classList.contains("js-buy")) {
+        e.preventDefault();
+        console.log("buy");
+      } else if (e.target.classList.contains("js-more")) {
+        e.preventDefault();
+        let clickedCoffeeId = e.target
+          .closest(".coffee-card")
+          .getAttribute("data-id");
+        let clickedData = getClickedData(clickedCoffeeId, "gift");
         renderCoffeeModalWindow(clickedData);
       }
     });
