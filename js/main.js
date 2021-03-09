@@ -182,14 +182,14 @@ const addCoffeeClickHandler = () => {
         let clickedCoffeeId = e.target
           .closest(".coffee-card")
           .getAttribute("data-id");
-        let clickedData = getClickedData(clickedCoffeeId);
+        let clickedData = getClickedData(clickedCoffeeId, "coffee");
         renderCoffeeModalWindow(clickedData);
       }
     });
 };
 
-const getClickedData = (id) => {
-  return data.coffee.find((coffee) => coffee.id === +id);
+const getClickedData = (id, keyName) => {
+  return data[keyName].find((coffee) => coffee.id === +id);
 };
 
 const renderCoffeeModalWindow = (content) => {
@@ -211,12 +211,8 @@ const addComboSetClickHandler = () => {
         let clickedCoffeeId = e.target
           .closest(".coffee-card")
           .getAttribute("data-id");
-        let clickedData = getComboSetClickedData(clickedCoffeeId);
+        let clickedData = getClickedData(clickedCoffeeId, "combo");
         renderCoffeeModalWindow(clickedData);
       }
     });
-};
-
-const getComboSetClickedData = (id) => {
-  return data.combo.find((coffee) => coffee.id === +id);
 };
