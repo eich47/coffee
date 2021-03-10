@@ -1,4 +1,5 @@
 import { Storage } from "./Storage";
+import { observer } from "./LocalStorageObserver";
 
 export const COFFEE_KEY = "coffee";
 
@@ -22,6 +23,7 @@ export class LocalStorage extends Storage {
     valueForSave += value;
 
     window.localStorage.setItem(key, valueForSave);
+    observer.broadcast(valueForSave);
   }
 
   removeItem(key) {

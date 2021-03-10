@@ -8,6 +8,7 @@ import { CoffeeCardModal } from "./CoffeeCardModal";
 import { Cart } from "./Cart";
 import { CartModal } from "./CartModal";
 import { LocalStorage, COFFEE_KEY } from "./LocalStorage";
+import { observer } from "./LocalStorageObserver";
 
 window.onload = function () {
   renderCoffeeSlider();
@@ -16,6 +17,7 @@ window.onload = function () {
   renderMobileMenu();
   onResizeBrowser();
   cartIconClickHandler();
+  showCountSelectedItem();
 };
 
 //coffee slider
@@ -274,4 +276,32 @@ const renderCartModalWithSelectedItem = (content) => {
   const cartTemplate = cart.generateCart(content);
   const cartModal = new CartModal("cart__modal", cartTemplate);
   cartModal.renderCartModal();
+};
+
+const showCountSelectedItem = () => {
+  const cartBadge = document.querySelector(".cart .cart__badge");
+  const storage = getStorage();
+  const idsStr = storage.getItem(COFFEE_KEY);
+
+  const getCountOrderedItem = (idsData) => {
+    let dataCount = null;
+
+    if (idsData === "" || idsData === null) {
+      dataCount = 0;
+    } else {
+      const count = idsData.split("_").length;
+      dataCount = count;
+    }
+    return dataCount;
+  };
+
+  let dataCount = getCountOrderedItem(idsStr);
+  cartBadge.innerHTML = dataCount;
+
+  //observer
+
+  observer.subscribe((data) => {
+    let dataCount = getCountOrderedItem(data);
+    cartBadge.innerHTML = dataCount;
+  });
 };
