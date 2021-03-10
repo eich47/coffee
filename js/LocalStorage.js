@@ -28,6 +28,30 @@ export class LocalStorage extends Storage {
     window.localStorage.removeItem(key);
   }
 
+  removeIdFromList(key, id) {
+    const idList = this.getItem(key);
+    if (idList === null) {
+      console.log(`have not found ${key} key in local storage`);
+      return;
+    }
+
+    const removeIdFromArray = (idList, id) => {
+      const idArray = idList.split("_");
+      const index = idArray.indexOf(id);
+      if (index !== -1) {
+        idArray.splice(index, 1);
+      } else {
+        console.log(`error: id: ${id} are not found in array: ${idArray}`);
+      }
+      return idArray;
+    };
+
+    const editedIdList = removeIdFromArray(idList, id).join("_");
+
+    this.removeItem(key);
+    this.setItem(key, editedIdList);
+  }
+
   isExistKey(key) {
     return this.getItem(key) ? true : false;
   }
