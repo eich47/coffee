@@ -1,9 +1,3 @@
-.cart-checkout {
-}
-
-.cart-checkout__content {
-}
-
 .cart-checkout__item {
   display: flex;
   align-items: center;
@@ -14,10 +8,14 @@
   margin-right: 15px;
 }
 
+.cart-checkout__price {
+  min-width: 70px;
+}
+
 .cart-checkout__close-icon {
-  margin-left: 15px;
   width: 16px;
   height: 16px;
+  margin-left: 15px;
 
   svg {
     width: 16px;
