@@ -15,6 +15,7 @@ window.onload = function () {
   renderGiftTabs();
   renderMobileMenu();
   onResizeBrowser();
+  cartIconClickHandler();
 };
 
 //coffee slider
@@ -251,17 +252,26 @@ const getStorage = () => {
   return new LocalStorage();
 };
 
-// const cart = new Cart();
-// const selectedCoffee = getStorage().getItem(COFFEE_KEY) ?? "";
-// const dataCart = [];
-// selectedCoffee.split("_").forEach((id) => {
-//   const item = data.coffee.find((item) => item.id === +id);
-//   if (item) {
-//     dataCart.push(item);
-//   }
-// });
+//handler for cart icon
 
-// const cartTemplate = cart.generateCart(dataCart);
+const cartIconClickHandler = () => {
+  document.querySelector(".cart").addEventListener("click", () => {
+    const selectedCoffee = getStorage().getItem(COFFEE_KEY) ?? "";
+    const dataForCart = [];
+    selectedCoffee.split("_").forEach((id) => {
+      const item = data.coffee.find((item) => item.id === +id);
+      if (item) {
+        dataForCart.push(item);
+      }
+    });
 
-// const cartModal = new CartModal("cart__modal", cartTemplate);
-// cartModal.renderCartModal();
+    renderCartModalWithSelectedItem(dataForCart);
+  });
+};
+
+const renderCartModalWithSelectedItem = (content) => {
+  const cart = new Cart();
+  const cartTemplate = cart.generateCart(content);
+  const cartModal = new CartModal("cart__modal", cartTemplate);
+  cartModal.renderCartModal();
+};
