@@ -71,8 +71,15 @@ export class Cart {
   }
 
   bindEvents() {
-    this.makeOrderButton.addEventListener("click", () => {
+    this.makeOrderButton.addEventListener("click", (e) => {
       console.log("order item");
+      if (this.countOrderedItem() === 0) {
+        const text = e.target.innerHTML;
+        e.target.innerHTML = "Добавьте товар в корзину";
+        setTimeout(() => {
+          e.target.innerHTML = text;
+        }, 1000);
+      }
     });
   }
 
@@ -97,5 +104,10 @@ export class Cart {
     const key = itemCart.dataset.key;
     this.removeItemFromStorage(id, key);
     itemCart.remove();
+  }
+
+  countOrderedItem() {
+    const count = new LocalStorage().getCountItemsByKey(COFFEE_KEY);
+    return count;
   }
 }

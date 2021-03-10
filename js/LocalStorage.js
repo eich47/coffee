@@ -55,4 +55,13 @@ export class LocalStorage extends Storage {
   isExistKey(key) {
     return this.getItem(key) ? true : false;
   }
+
+  getCountItemsByKey(key) {
+    const value = this.getItem(key);
+    if (value === null || value === "") {
+      return 0;
+    } else {
+      return value.split("_").length;
+    }
+  }
 }
