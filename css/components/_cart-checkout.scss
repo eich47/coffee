@@ -1,0 +1,26 @@
+.cart-checkout {
+}
+
+.cart-checkout__content {
+}
+
+.cart-checkout__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.cart-checkout__name {
+  margin-right: 15px;
+}
+
+.cart-checkout__close-icon {
+  margin-left: 15px;
+  width: 16px;
+  height: 16px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
