@@ -5,6 +5,9 @@ import { Tabs } from "./Tabs";
 import { Menu } from "./Menu";
 import { MenuButton } from "./MenuButton";
 import { CoffeeCardModal } from "./CoffeeCardModal";
+import { Cart } from "./Cart";
+import { CartModal } from "./CartModal";
+import { LocalStorage, COFFEE_KEY } from "./LocalStorage";
 
 window.onload = function () {
   renderCoffeeSlider();
@@ -179,6 +182,11 @@ const addCoffeeClickHandler = () => {
       if (e.target.classList.contains("js-buy")) {
         e.preventDefault();
         console.log("buy");
+        let clickedCoffeeId = e.target
+          .closest(".coffee-card")
+          .getAttribute("data-id");
+        const storage = getStorage();
+        storage.setItem(COFFEE_KEY, clickedCoffeeId);
       } else if (e.target.classList.contains("js-more")) {
         e.preventDefault();
         let clickedCoffeeId = e.target
@@ -238,3 +246,22 @@ const addGiftSetClickHandler = () => {
       }
     });
 };
+
+const getStorage = () => {
+  return new LocalStorage();
+};
+
+// const cart = new Cart();
+// const selectedCoffee = getStorage().getItem(COFFEE_KEY) ?? "";
+// const dataCart = [];
+// selectedCoffee.split("_").forEach((id) => {
+//   const item = data.coffee.find((item) => item.id === +id);
+//   if (item) {
+//     dataCart.push(item);
+//   }
+// });
+
+// const cartTemplate = cart.generateCart(dataCart);
+
+// const cartModal = new CartModal("cart__modal", cartTemplate);
+// cartModal.renderCartModal();
