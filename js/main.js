@@ -9,6 +9,7 @@ import { Cart } from "./Cart";
 import { CartModal } from "./CartModal";
 import { LocalStorage, COFFEE_KEY } from "./LocalStorage";
 import { observer } from "./LocalStorageObserver";
+import { Notify } from "./Notify";
 
 window.onload = function () {
   renderCoffeeSlider();
@@ -190,6 +191,7 @@ const addCoffeeClickHandler = () => {
           .getAttribute("data-id");
         const storage = getStorage();
         storage.setItem(COFFEE_KEY, clickedCoffeeId);
+        showNotification("добавлен в корзину");
       } else if (e.target.classList.contains("js-more")) {
         e.preventDefault();
         let clickedCoffeeId = e.target
@@ -304,4 +306,8 @@ const showCountSelectedItem = () => {
     let dataCount = getCountOrderedItem(data);
     cartBadge.innerHTML = dataCount;
   });
+};
+
+const showNotification = (content) => {
+  new Notify("").buildNotify(content);
 };
