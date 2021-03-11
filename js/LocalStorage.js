@@ -1,5 +1,6 @@
 import { Storage } from "./Storage";
 import { observer } from "./LocalStorageObserver";
+import { getItemsFromKeyById } from "./data";
 
 export const COFFEE_KEY = "coffee";
 
@@ -65,5 +66,17 @@ export class LocalStorage extends Storage {
     } else {
       return value.split("_").length;
     }
+  }
+
+  getSelectedItems(key) {
+    const ids = this.getItem(key);
+    if (ids === null || ids === "") {
+      return [];
+    }
+    const idsArr = ids.split("_");
+
+    const itemsObj = getItemsFromKeyById(key, idsArr);
+
+    return itemsObj;
   }
 }

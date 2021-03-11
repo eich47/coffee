@@ -19,4 +19,8 @@
     color: $color-background;
     background-color: $color-accent;
   }
+
+  &_cart-order {
+    display: inline-flex;
+  }
 }

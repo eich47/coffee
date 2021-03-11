@@ -28,9 +28,17 @@ export class Cart {
     this.makeOrderButton = this.createDomNode(
       "button",
       "link-button",
-      "link-button_buy"
+      "link-button_buy",
+      "link-button_cart-order"
     );
     this.makeOrderButton.innerHTML = "Заказать";
+
+    this.totalCostField = this.createDomNode(
+      "span",
+      "cart-checkout__total-price"
+    );
+    this.totalCostField.innerHTML = `Сумма: `;
+    this.totalCostField.innerHTML += `<span class="cart-checkout__summa">${this.costTotalSumma()}</span>`;
 
     this.setContent(content);
 
@@ -57,6 +65,9 @@ export class Cart {
       cloneRemoveItem.addEventListener("click", (e) => {
         const target = e.target.closest(".js-remove");
         this.removeItemFromCart(target);
+        document.querySelector(
+          ".cart-checkout__summa"
+        ).innerHTML = this.costTotalSumma();
       });
 
       clone.append(cloneRemoveItem);
@@ -68,6 +79,7 @@ export class Cart {
   appendCartElement() {
     this.cart.append(this.cartContent);
     this.cart.append(this.makeOrderButton);
+    this.cart.append(this.totalCostField);
   }
 
   bindEvents() {
@@ -109,5 +121,16 @@ export class Cart {
   countOrderedItem() {
     const count = new LocalStorage().getCountItemsByKey(COFFEE_KEY);
     return count;
+  }
+
+  costTotalSumma() {
+    const items = new LocalStorage().getSelectedItems(COFFEE_KEY);
+
+    const summa = items.reduce((acc, item) => {
+      acc += +item.price;
+      return acc;
+    }, 0);
+
+    return summa;
   }
 }

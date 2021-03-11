@@ -127,3 +127,20 @@ export const data = {
     },
   ],
 };
+
+export const getItemsFromKeyById = (key, ids = []) => {
+  const dataByKey = data[key];
+  if (dataByKey === undefined) {
+    return [];
+  }
+
+  const items = [];
+  ids.forEach((id) => {
+    const el = dataByKey.find((obj) => obj.id === +id);
+    if (el !== undefined) {
+      items.push(el);
+    }
+  });
+
+  return items;
+};
